@@ -1,16 +1,28 @@
 import AboutUsPage from './pages/about-us/about-us';
+import BlogPage from './pages/blogPage/blogPage';
+import Dashboard from './pages/Dashboard/dashboard';
 import HomePage from './pages/home/home';
 import NotFoundPage from './pages/not-found/not-found';
+import PostPage from './pages/post/postPage';
 import ProfilePage from './pages/profile/profile';
 
 const mainRoutes = [
+  {
+    isExact: false,
+    component: PostPage,
+    path: '/blog/:id',
+    title: 'Post',
+    hasLink: false,
+    id: 0,
+  },
+
   {
     isExact: false,
     component: AboutUsPage,
     path: '/About-us/',
     title: 'About us',
     hasLink: true,
-    id: 0,
+    id: 1,
   },
   {
     isExact: false,
@@ -18,7 +30,7 @@ const mainRoutes = [
     path: '/profile/',
     title: 'Profile',
     hasLink: true,
-    id: 1,
+    id: 2,
   },
   {
     isExact: true,
@@ -26,16 +38,35 @@ const mainRoutes = [
     path: '/',
     title: 'Home',
     hasLink: true,
-    id: 2,
+    id: 3,
   },
   {
     isExact: false,
+    component: BlogPage,
+    path: '/blog',
+    title: 'Blog',
+    hasLink: true,
+    id: 4,
+  },
+
+  {
+    isExact: false,
     component: NotFoundPage,
-    path: '/*',
+    path: '*',
     title: 'Not found',
     hasLink: false,
-    id: 3,
+    id: 5,
   },
 ];
 
-export default mainRoutes;
+const profileRoutes = [
+  {
+    isExact: true,
+    component: Dashboard,
+    path: '/dashboard',
+    title: 'Dashboard',
+    id: 0,
+  },
+];
+
+export { mainRoutes, profileRoutes };
