@@ -1,10 +1,11 @@
 import AboutUsPage from './pages/about-us/about-us';
 import BlogPage from './pages/blogPage/blogPage';
-import Dashboard from './pages/Dashboard/dashboard';
+import Dashboard from './components/Dashboard/dashboard';
 import HomePage from './pages/home/home';
 import NotFoundPage from './pages/not-found/not-found';
 import PostPage from './pages/post/postPage';
 import ProfilePage from './pages/profile/profile';
+import Download from './components/downloads/downloads';
 
 const mainRoutes = [
   {
@@ -63,9 +64,16 @@ const profileRoutes = [
   {
     isExact: true,
     component: Dashboard,
-    path: '/dashboard',
+    path: '/profile/dashboard',
     title: 'Dashboard',
     id: 0,
+  },
+  {
+    isExact: true,
+    component: Download,
+    path: '/profile/downloads',
+    title: 'Downloads',
+    id: 1,
   },
 ];
 
