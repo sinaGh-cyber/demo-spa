@@ -32,6 +32,13 @@ const mainRoutes = [
     title: 'Profile',
     hasLink: true,
     id: 2,
+  },  {
+    isExact: false,
+    component: BlogPage,
+    path: '/blog',
+    title: 'Blog',
+    hasLink: true,
+    id: 3,
   },
   {
     isExact: true,
@@ -39,16 +46,9 @@ const mainRoutes = [
     path: '/',
     title: 'Home',
     hasLink: true,
-    id: 3,
-  },
-  {
-    isExact: false,
-    component: BlogPage,
-    path: '/blog',
-    title: 'Blog',
-    hasLink: true,
     id: 4,
   },
+
 
   {
     isExact: false,
