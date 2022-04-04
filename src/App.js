@@ -1,5 +1,4 @@
 import { BrowserRouter, Switch as Routes, Route } from 'react-router-dom';
-import './App.css';
 import Layout from './Layout/layout';
 import { mainRoutes } from './routes';
 
