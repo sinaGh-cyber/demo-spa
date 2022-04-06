@@ -15,7 +15,7 @@ const ProfilePage = () => {
       </p>
       <SideBar />
       {profileRoutes.map((route) => {
-        return <Route path={route.path} component={route.component} />;
+        return <Route key={route.id} path={route.path} component={route.component} />;
       })}
     </section>
   );
