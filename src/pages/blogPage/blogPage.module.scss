@@ -1,0 +1,31 @@
+.ulTag {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  width: 80vw;
+  background-color: rgb(251, 215, 159);
+  margin: 1rem 0;
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    list-style: none;
+    border-bottom: solid 2px rgb(255, 234, 207);
+
+    a {
+      all: unset;
+      padding: 1rem;
+      width: 100%;
+      cursor: pointer;
+
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: rgb(255, 192, 109);
+      }
+    }
+  }
+}
