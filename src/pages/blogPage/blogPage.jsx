@@ -16,7 +16,10 @@ const BlogPage = () => {
         {blogPostsLink.map((post) => {
           return (
             <li key={post.id}>
-              <Link replace={true} to={post.to}>
+              <Link
+                replace={true}
+                to={{ pathname: post.to, search: 'location=true' }}
+              >
                 {post.title}
               </Link>
             </li>
